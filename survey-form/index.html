@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Survey Form</title>
+  </head>
+  
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 id="title"
+            class="title">Love Survey Form</h1>
+        <p id="description"
+           class="description">Love is love</p>
+      </header>
+      <form id="survey-form">
+        <div class="forms">
+          <label id="name-label"
+                 for="name">Name</label>
+          <input type="text"
+                 name="name"
+                 id="name"
+                 class="details"
+                 placeholder="Enter your name"
+                 required>
+        </div>
+        <div class="forms">
+          <label id="email-label"
+                 for="email">Email</label>
+          <input type="email"
+                 name="email"
+                 id="email"
+                 class="details"
+                 placeholder="Enter your email"
+                 required>
+        </div>
+        <div class="forms">
+          <label id="number-label"
+                 for="number">Number of past relationships<span class="opt">(optional)</span></label>
+          <input type="number"
+                 name="number"
+                 id="number"
+                 min="0"
+                 max="100"
+                 class="details"
+                 placeholder="Number of relationships">
+        </div>
+        <div class="forms">
+          <p>Which option best describes your relationship status?</p>
+          <select id="dropdown"
+                  name="status"
+                  class="details"
+                  required>
+            <option disabled selected value>Select current relationship status</option>
+            <option value="single">Single</option>
+            <option value="relationship">In a relationship</option>
+            <option value="engaged">Engaged</option>
+            <option value="married">Married</option>
+            <option value="divorced">Divorced</option>
+            <option value="widowed">Widowed</option>
+          </select>
+        </div>
+        <div class="forms">
+          <p>Do you believe in love at first sight?</p>
+          <label>
+            <input name="first-sight"
+                   value="yes"
+                   type="radio"
+                   class="input-radio">Yes
+          </label>
+          <label>
+            <input name="first-sight"
+                   value="no"
+                   type="radio"
+                   class="input-radio">No
+          </label>
+          <label>
+            <input name="first-sight"
+                   value="unsure"
+                   type="radio"
+                   class="input-radio">Unsure
+          </label>
+        </div>
+        <div class="forms">
+          <p>What is the first thing you notice about someone you're interested in?</p>
+          <select id="first-thing"
+                  name="first-thing"
+                  class="details"
+                  required>
+            <option disabled selected value>Select an Option</option>
+            <option value="eyes">Eyes</option>
+            <option value="smile">Smile</option>
+            <option value="voice">Voice</option>
+            <option value="body">Body</option>
+            <option value="personality">Personality</option>
+          </select>
+        </div>
+        <div class="forms">
+          <p>What are the most important qualities that you look for in a partner?<span class="check-all">(Check all that apply)</span></p>
+          <label>
+            <input name="quality"
+                   value="kind"
+                   type="checkbox"
+                   class="input-checkbox">
+                   Kindness
+          </label>
+          <label>
+            <input name="quality"
+                   value="humor"
+                   type="checkbox"
+                   class="input-checkbox">
+                   Sense of humor
+          </label>
+          <label>
+            <input name="quality"
+                   value="patient"
+                   type="checkbox"
+                   class="input-checkbox">
+                   Patience
+          </label>
+          <label>
+            <input name="quality"
+                   value="attractive"
+                   type="checkbox"
+                   class="input-checkbox">
+                   Attractiveness
+          </label>
+          <label>
+            <input name="quality"
+                   value="adventure"
+                   type="checkbox"
+                   class="input-checkbox">
+                   Adventurous
+          </label>
+          <label>
+            <input name="quality"
+                   value="loyal"
+                   type="checkbox"
+                   class="input-checkbox">
+                   Loyalty
+          </label>
+          <label>
+            <input name="quality"
+                   value="style"
+                   type="checkbox"
+                   class="input-checkbox">
+                   Stylish
+          </label>
+          <label>
+            <input name="quality"
+                   value="success"
+                   type="checkbox"
+                   class="input-checkbox">
+                   Successful
+          </label>
+          <label>
+            <input name="quality"
+                   value="passion"
+                   type="checkbox"
+                   class="input-checkbox">
+                   Passionate
+          </label>
+        </div>
+        <div class="forms">
+          <p>Comments</p>
+          <textarea id="comments"
+                class="input-text"
+                name="comments"
+                placeholder="Enter any comments here">
+          </textarea>
+        </div>
+        <div class="forms">
+          <button type="sumbit"
+                  class="submit-button"
+                  id="submit">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
