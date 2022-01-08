@@ -1,0 +1,165 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+    <title>CSS Techinical Documentation</title>
+  </head>
+  <body>
+    
+    <!--Navigation Bar-->
+    
+    <nav id="navbar">
+      <h1>CSS Documentation</h1>
+      <ul>
+        <li>
+          <a class="nav-link" href="#introduction">
+            Introduction
+          </a>
+        </li>
+        <li>
+          <a class="nav-link" href="#what-to-know">
+            What to Know
+          </a>
+        </li>
+        <li>
+          <a class="nav-link" href="#selector">
+            CSS Selector
+          </a>
+        </li>
+        <li>
+          <a class="nav-link" href="#classes">
+            Classes
+          </a>
+        </li>
+        <li>
+          <a class="nav-link" href="#fonts">
+            Font Families and Google Font
+          </a>
+        </li>
+        <li>
+          <a class="nav-link" href="#id-attribute">
+            Id Attribute
+          </a>
+        </li>
+        <li>
+          <a class="nav-link" href="#padding-border-margin">
+            Padding, Border, and Margin
+          </a>
+        </li>
+        <li>
+          <a class="nav-link" href="#variables">
+            CSS Variables
+          </a>
+        </li>
+        <li>
+          <a class="nav-link" href="#references">
+            References
+          </a>
+        </li>
+      </ul>
+    </nav>
+    
+    <!--Main-->
+    
+    <main id="main">
+      <section id="introduction">
+        <h2>Introduction</h2>
+        <article>
+          <p>Cascading Stye Sheets, or CSS, tell the browser how to display the text and other content that you write in HTML. There are three main ways to apply CSS stying:</p>
+            <ul>
+            <li>
+              You can apply inline styles directly to HTML elements with the style attribute
+            </li>
+            <li>
+              You can place CSS rules within style tags in an HTML document
+            </li>
+            <li>
+              You can place CSS rules in an external stylesheet, then reference that file in the HTML document
+            </li>
+          </ul>
+          <p>Even though the first two options have their uses, most developers prefer external stylesheets because they keep the styles separate from the HTML elements. This improves the readability and reusability of your code. The idea behind CSS is you can use a selector to target an HTML element in the Document Object Model, or DOM, and then apply a variety of attributes to that element to change the way it is displayed on the page.</p>
+        </article>
+      </section>
+      <section id="what-to-know">
+        <h2>What to Know</h2>
+        <article>
+          <p>There are a few things you should understand prior to learning CSS:</p>
+          <ul>
+            <li>The basics of HTML and HTML5</li>
+            <li>The consept of inheritance</li>
+            <li>The concept of cascading</li>
+          </ul>
+        </article>
+      </section>
+      <section id="selector">
+        <h2>CSS Selector</h2>
+        <article>
+          <p>At the top of your code create a style block. Inside the style block you can create a CSS selector for elements. It is important to have both opening and closing curly brackets ({ }) around each element's style rules. You also need to make sure that your element's style definition is between the opening and cosing style tags. Finally, be sure to add a semicolon to the end of each of your element's style rules.</p>
+        </article>
+      </section>
+      <section id="classes">
+        <h2>Classes</h2>
+        <article>
+          <p>Classes are reusbale styles that can be added to HTML elements. In you CSS style element, class names start with a period. In your HTML element's class attribute, the class name does not include the period. Classes allow you to use the same CSS styles on multiple HTML elements.</p>
+        </article>
+      </section>
+      <section id="fonts">
+        <h2>Font Families and Google Fonts</h2>
+        <article>
+          <p>You can set which font an element should use, by using the font-family property. Google Fonts is a free library of fonts that you cna use in your CSS by referencing the font's URL. To import a Google Font, you can copy the URL from the Google Fonts library and then paste it into your HTML at the top of your code. You can use the font in your CSS by using the font name as the FAMLY_NAME in the following example:
+          <code>
+            font-family: FAMILY_NAME, GENERIC_NAME;
+          </code>
+          The GENERIC_NAME is optional, and is a fallback font in case the other font is not available</p>
+          <p>Famliy names are case sensitive and need to be wrapped in quotes if there is a space in the name. There are several default fonts that are available in all browsers. These generic fonts include monospace, serif, and sans-serif. When one font isn't available, you can tell the browser to "degrade" to nother font. Generic font family names are not case sensitive and do not need quotes because they are CSS keywords.</p>
+        </article>
+      </section>
+      <section id="id-attribute">
+        <h2>Id Attribute</h2>
+        <article>
+          <p>In addition to classes, each HTML element can also have an id attribute. There are several benefits to using id attributes. You can use an id to style a single element and you can use them to select and modify specific elements with JavaScript. id attributes should be unique. Browser's won't enforce this, but it is widely agreed upon as best practice. You can style id attributes using CSS. An id is not reusable and should only be applied to one element. An id also has a higher specificity, or importance, than a class, so if both are applied to the same element and have conflicting styles, the styles of the id will be applied. In your style element you always reference ids using a #, for example:
+          <code>
+            #id-attribute
+          </code>
+          </p>
+        </article>
+      </section>
+      <section id="padding-border-margin">
+        <h2>Padding, Border, and Margin</h2>
+        <article>
+          <p>Three important properties that control the space around each HTML element are padding, border, and margin. An element's padding controls the amount of space between an element's content and it's border. An element's margin controls the amount of space between an element's border and surrounding elements. If you set an element's margin to a negative value, the element will grow larger.</p>
+          <p>CSS allows you to control the padding and margin of all four sides of an element, for example:
+          <code>
+            padding: 0 5px 10px 15px;
+          </code>
+          <code>
+            margin: 0 5px 10px 15px;
+          </code>
+          These four values work like a clock: top, right, bottom, left.</p>
+        </article>
+      </section>
+      <secton id="variables">
+        <h2>CSS Variables</h2>
+        <article>
+          <p>CSS variables are a powerful way to change many CSS style properties at once by changing only one value. To create a CSS variable, you need to give it a name with two hyphens in front of it and assign it a value. Now you can use that variable everywhere else in your code to change the value of other elements by referencing the name you gave it. For example:
+          <code>
+            --lollipop: pink;
+          </code>
+          <code>
+            color: var(--lollipop);
+          </code>
+          </p>
+        </article>
+      </secton>
+      <section id="references">
+        <h2>References</h2>
+        <article>
+          <p>The information in this documentation comes from <a href="https://www.freecodecamp.org/learn">FreeCodeCamp</a></p>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
