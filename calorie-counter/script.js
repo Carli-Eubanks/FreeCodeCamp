@@ -1,3 +1,4 @@
+//variables
 const calorieCounter = document.getElementById('calorie-counter');
 const budgetNumberInput = document.getElementById('budget');
 const entryDropdown = document.getElementById('entry-dropdown');
@@ -6,16 +7,19 @@ const clearButton = document.getElementById('clear');
 const output = document.getElementById('output');
 let isError = false;
 
+//cleans string and sotres valid number characters
 function cleanInputString(str) {
   const regex = /[+-\s]/g;
   return str.replace(regex, '');
 }
 
+//checks if a string is valid
 function isInvalidInput(str) {
   const regex = /\d+e\d+/i;
   return str.match(regex);
 }
 
+//allows users to add entries to the calorie counter
 function addEntry() {
   const targetInputContainer = document.querySelector(`#${entryDropdown.value} .input-container`);
   const entryNumber = targetInputContainer.querySelectorAll('input[type="text"]').length + 1;
@@ -32,6 +36,7 @@ function addEntry() {
   targetInputContainer.insertAdjacentHTML('beforeend', HTMLString);
 }
 
+//makes the calculations
 function calculateCalories(e) {
   e.preventDefault();
   isError = false;
@@ -67,6 +72,7 @@ function calculateCalories(e) {
   output.classList.remove('hide');
 }
 
+//pulls all the calories
 function getCaloriesFromInputs(list) {
   let calories = 0;
 
@@ -84,6 +90,7 @@ function getCaloriesFromInputs(list) {
   return calories;
 }
 
+//clears the form 
 function clearForm() {
   const inputContainers = Array.from(document.querySelectorAll('.input-container'));
 
@@ -96,6 +103,7 @@ function clearForm() {
   output.classList.add('hide');
 }
 
+//event listeners
 addEntryButton.addEventListener("click", addEntry);
 calorieCounter.addEventListener("submit", calculateCalories);
-clearButton.addEventListener("click", clearForm)
+clearButton.addEventListener("click", clearForm);
